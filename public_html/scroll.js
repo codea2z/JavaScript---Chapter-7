@@ -5,13 +5,15 @@
  */
 function init()
 {
-    var panel = document.getElementById("panel");
+    var i, panel = document.getElementById("panel");
     
-    window.alert("Here's a simple message.");
+    for (i = 1; i < 501; i++)
+    {
+        panel.innerHTML += i + " ";
+    }
     
-    panel.innerHTML = "Confirm: " + window.confirm("Go or Stop?");
-    
-    panel.innerHTML += "<br>Prompt: " + window.prompt("Yes or No?", "Yes");            
+    window.scrollBy(0, 500);
+    window.moveTo(0,0);
 }
 
 document.addEventListener("DOMContentLoaded", init, false);
