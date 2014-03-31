@@ -5,15 +5,12 @@
  */
 function init()
 {
-    var i, panel = document.getElementById("panel");
+    var panel = document.getElementById("panel");
+    panel.innerHTML = "Regular information in the main window";
     
-    for (i = 1; i < 501; i++)
-    {
-        panel.innerHTML += i + " ";
-    }
+    var winObject = window.open("pop.html", "windowName", 
+                    "top=200,left=100,width=450,height=100,status=yes");
     
-    window.scrollBy(0, 500);
-    window.moveTo(0,0);
 }
 
 document.addEventListener("DOMContentLoaded", init, false);
